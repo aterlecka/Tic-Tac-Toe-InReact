@@ -2,15 +2,12 @@ body {
     margin: 40px;
     background-color: black;
 }
-
 #board-row:after {
     clear: both;
     content: "";
     display: table;
     text-align: center;
-
 }
-
 #title {
     font-family: Dialog;
     text-align: center;
@@ -19,7 +16,6 @@ body {
     font-size: 40px;
     color: white;
 }
-
 #onlyAsk {
     font-family: Dialog;
     text-align: center;
@@ -28,7 +24,6 @@ body {
     font-size: 25px;
     color: white;
 }
-
 #status {
     font-family: Dialog;
     margin-bottom: 10px;
@@ -36,7 +31,6 @@ body {
     font-size: 20px;
     color: white;
 }
-
 #status1 {
     font-family: Dialog;
     margin-bottom: 10px;
@@ -44,7 +38,6 @@ body {
     font-size: 20px;
     color: white;
 }
-
 #square {
     background: black;
     border: 2px solid white;
@@ -55,7 +48,6 @@ body {
     height: 110px;
     width: 110px;
     text-align: center;
-
 }
 
 #game {
@@ -66,12 +58,7 @@ body {
 
 #gameBoard {
     margin: auto;
-
 }
-
-input #buttonName {
-}
-
 #buttonName {
     border-radius: 50%;
     font-size: 30px;
@@ -86,11 +73,6 @@ input #buttonName {
   padding-left: 50px;
 
 }
-
-#buttonName:active {
-    /*display: none;*/
-}
-
 #myDIV {
     display: none;
 

@@ -49,7 +49,6 @@ class Board extends React.Component {
         if (winner) {
             status = 'WINNER IS ' + winner + "GRATULATION !!!";
         }
-
         return (
             <div>
                 <div>
@@ -72,10 +71,8 @@ class Board extends React.Component {
                         {this.renderSquare(8)}
                     </div>
                     <div id="status">{status}</div>
-
                 </div>
             </div>
-
         );
     }
 }
@@ -88,7 +85,6 @@ class Game extends React.Component {
                 <div>
                     <input type="button" id={"buttonName"} value={"START GAME"} onClick={changeDisplayInBoardAndButton}/>
                 </div>
-
                 <div id="myDIV">
                     <div id="game">
                         <div id="gameBoard">
@@ -116,7 +112,6 @@ function changeDisplayInBoardAndButton() {
         y.style.display = "none";
     }
 }
-
 function calculateWinner(squares) {
     const lines = [
         [0, 1, 2],
