@@ -53,7 +53,6 @@ body {
 #game {
     display: flex;
     flex-direction: row;
-
 }
 
 #gameBoard {
@@ -71,10 +70,7 @@ body {
     margin: auto;
     display: flex;
   padding-left: 50px;
-
 }
 #myDIV {
     display: none;
-
-
 }
