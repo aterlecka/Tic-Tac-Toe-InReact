@@ -11,7 +11,6 @@ function Square(props) {
     );
 }
 
-
 class Board extends React.Component {
     constructor(props) {
         super(props);
@@ -19,7 +18,7 @@ class Board extends React.Component {
             squares: Array(9).fill(null),
             xIsNext: true,
         };
-    }
+    };
 
     handleClick(positionInSquare) {
         const squares = this.state.squares.slice();
@@ -32,7 +31,6 @@ class Board extends React.Component {
             xIsNext: !this.state.xIsNext,
         });
     }
-
     renderSquare(positionInSquare) {
         return (
             <Square
@@ -41,32 +39,23 @@ class Board extends React.Component {
             />
         );
     }
-
-
     render() {
         let winner = calculateWinner(this.state.squares);
         let title = "TIC- TAC- TOE"
         let onlyAsk = "Who is next?";
-        let status1 = "The next is:  " + (this.state.xIsNext ? 'X' : 'O');
+        let status1 = "The next is:  " + (this.state.xIsNext ? '❌' : '⭕');
         let status = '';
-
 
         if (winner) {
             status = 'WINNER IS ' + winner + "GRATULATION !!!";
         }
 
         return (
-
             <div>
-
-
-                <div id={"allGame"}>
-
+                <div>
                     <div id="title">{title}</div>
                     <div id='onlyAsk'>{onlyAsk}</div>
                     <div id='status1'>{status1}</div>
-
-
                     <div id="board-row">
                         {this.renderSquare(0)}
                         {this.renderSquare(1)}
@@ -87,49 +76,46 @@ class Board extends React.Component {
                 </div>
             </div>
 
-
         );
     }
 }
 
 class Game extends React.Component {
 
-
     render() {
         return (
-            <div>
+            <div id={"allDivs"}>
                 <div>
-                    <input type="button" id={"buttonName"} value={"START GAME"} onClick={myFunction}/>
+                    <input type="button" id={"buttonName"} value={"START GAME"} onClick={changeDisplayInBoardAndButton}/>
                 </div>
 
                 <div id="myDIV">
                     <div id="game">
-                        <div id="game-board">
+                        <div id="gameBoard">
                             <Board/>
-                            <div id="game-info">
+                            <div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         );
-    }
+    };
 }
 
 export default Game;
 
-
-function myFunction() {
+function changeDisplayInBoardAndButton() {
     let x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
+    let y = document.getElementById("buttonName");
+    if (x.style.display === "block") {
         x.style.display = "none";
+        y.style.display = "block";
+    } else {
+        x.style.display = "block";
+        y.style.display = "none";
     }
 }
-
 
 function calculateWinner(squares) {
     const lines = [
